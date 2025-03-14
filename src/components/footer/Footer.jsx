@@ -1,10 +1,10 @@
 import '../../css.scss'
-import page from "../../../public/img/page.svg";
+import page from '../../assets/img/page.svg'
 
 const Footer = () => {
     return (
         <footer style={{backgroundImage: `url(${page})`}}>
-            <div className={'footer'}>
+            <div className={'footer'} data-aos="fade-up">
                 <div>
                     <h3>Product</h3>
                     <ul>

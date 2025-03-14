@@ -1,9 +1,10 @@
 import '../../css.scss'
+import "aos/dist/aos.css"
 
 const Header = () => {
     return (
-        <header>
-            <div className={'logo'}>
+        <header data-aos="zoom-out">
+            <div className={'logo1'} >
                 {/*<a href="">
                     <img src="" alt=""/>
                 </a>*/}

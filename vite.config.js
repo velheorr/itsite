@@ -13,6 +13,9 @@ export default defineConfig({
       scss: {
         api: 'modern'
       }
-    }
+    },
+    /*modules: {
+      localsConvention: 'camelCase',
+    },*/
   }
 })

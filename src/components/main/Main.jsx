@@ -1,15 +1,19 @@
 import '../../css.scss'
-import page from '/public/img/page.svg'
+import page from '../../assets/img/page.svg'
 import {Button, Stack} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 
+
+
 const Main = () => {
+
+
     return (
         <main style={{backgroundImage: `url(${page})`}}>
-            <section className={'mb50 mt50'}>
-                <h1 className={'titleText mb15'}>AI-driven tools for product teams</h1>
+            <section className={'mb50 mt50'} data-aos="zoom-in-up">
+                <h1 className={'titleText mb15'}>1AI-driven tools for product teams</h1>
                 <p className={'titleData mb25'}>
                     Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
                 </p>
@@ -22,14 +26,14 @@ const Main = () => {
                     </Button>
                 </Stack>
             </section>
-            <section className={'mb50'}>
+            <section className={'mb50'} data-aos="zoom-in-up">
                 <div className={'s2Title titleData mb25'}>Tailored Workflows</div>
                 <h2 className={'titleText mb15'}>Map your product journey</h2>
                 <p className={'titleData mb25'}>
                     Simple and elegant interface to start collaborating with your team in minutes. It seamlessly integrates with your code and your favorite programming languages.
                 </p>
-                <div className={'blocks'} style={{marginTop: '20px'}}>
-                    <article className={'big'}>
+                <div className={'blocks'} style={{marginTop: '20px'}} data-aos="zoom-in-up">
+                    <article className={'big'} >
                         <div className={'titleData '}>
                             <span className={'blockBadge'}>Built-in Tools</span>
                         </div>
@@ -56,7 +60,7 @@ const Main = () => {
 
                 </div>
             </section>
-            <section className={'mb50'}>
+            <section className={'mb50'} data-aos="fade-down">
                 <div className={'s2Title titleData mb25'}>Advanced Controls</div>
                 <h2 className={'titleText mb15'}>Built for modern product teams</h2>
                 <p className={'titleData mb25'}>
