@@ -6,7 +6,7 @@ const Footer = () => {
         <footer style={{backgroundImage: `url(${page})`}}>
             <div className={'footer'} data-aos="fade-up">
                 <div>
-                    <h3>Product</h3>
+                    <h3>Разработка</h3>
                     <ul>
                         <li><a href={'#'}>Features</a></li>
                         <li><a href={'#'}>Integrations</a></li>
@@ -18,14 +18,14 @@ const Footer = () => {
                 <div>
                     <h3>Company</h3>
                     <ul>
-                        <li><a href={'#'}>About us</a></li>
+                        <li><a href={'#'}>О нас</a></li>
                         <li><a href={'#'}>Blog</a></li>
                         <li><a href={'#'}>Careers</a></li>
                         <li><a href={'#'}>Financial statements</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Resources</h3>
+                    <h3>Ресурсы</h3>
                     <ul>
                         <li><a href={'#'}>Community</a></li>
                         <li><a href={'#'}>Terms of service</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h3>Content Library</h3>
+                    <h3>Библиотека</h3>
                     <ul>
                         <li><a href={'#'}>Templates</a></li>
                         <li><a href={'#'}>Tutorials</a></li>

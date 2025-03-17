@@ -4,15 +4,15 @@ import "aos/dist/aos.css"
 const Header = () => {
     return (
         <header data-aos="zoom-out">
-            <div className={'logo1'} >
+            <div className='titleText logo' >
                 {/*<a href="">
                     <img src="" alt=""/>
                 </a>*/}
-                logo
+                Guardian Digital
             </div>
             <div className={'menu'}>
                 <ul>
-                    <li>menu</li>
+                    {/*<li>menu</li>*/}
                 </ul>
             </div>
         </header>

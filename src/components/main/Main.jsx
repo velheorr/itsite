@@ -4,7 +4,12 @@ import {Button, Stack} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-
+import react from '../../assets/react.png'
+import one1c from '../../assets/one1c.png'
+import node from '../../assets/node.png'
+import mongo from '../../assets/mongo.png'
+import js from '../../assets/js.png'
+import vue from '../../assets/vue.png'
 
 
 const Main = () => {
@@ -13,9 +18,11 @@ const Main = () => {
     return (
         <main style={{backgroundImage: `url(${page})`}}>
             <section className={'mb50 mt50'} data-aos="zoom-in-up">
-                <h1 className={'titleText mb15'}>1AI-driven tools for product teams</h1>
+                <h1 className={'titleText mb15'}>Разработка програмного обеспечения</h1>
                 <p className={'titleData mb25'}>
-                    Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+                    Мы — команда профессионалов в сфере IT-решений, которые помогают бизнесу расти с помощью современных технологий.
+                    Специализируемся на разработке программного обеспечения, интеграции сложных систем и создании цифровых продуктов,
+                    которые решают реальные задачи. Наш подход — это индивидуальные решения, надежность и внимание к деталям. Доверьте нам ваш проект, и мы сделаем его успешным.
                 </p>
                 <Stack direction="row" spacing={2} justifyContent={'center'}>
                     <Button variant="outlined" startIcon={<DeleteIcon />}>
@@ -61,50 +68,51 @@ const Main = () => {
                 </div>
             </section>
             <section className={'mb50'} data-aos="fade-down">
-                <div className={'s2Title titleData mb25'}>Advanced Controls</div>
-                <h2 className={'titleText mb15'}>Built for modern product teams</h2>
+                <div className={'s2Title titleData mb25'}>Наши инструменты</div>
+                <h2 className={'titleText mb15'}>Мы используем современные инструменты и технологии для создания эффективных решений:</h2>
                 <p className={'titleData mb25'}>
-                    Open AI reads and understands your files, and with nothing more than a single line of feedback, so you can go further than the speed of thought.
+                    Наш стек постоянно обновляется, чтобы соответствовать самым высоким стандартам и требованиям рынка.
                 </p>
                 <div className={'blocks'} style={{marginTop: '20px'}}>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        {/*<AcUnitIcon/>*/}
+                        <img src={react} alt="#"/>
+                        <h3 className={'mb15'}>React</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>
                     </article>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        <img src={one1c} alt="#"/>
+                        <h3 className={'mb15'}>1c</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>
                     </article>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        <img src={node} alt="#"/>
+                        <h3 className={'mb15'}>Node JS</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>
                     </article>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        <img src={mongo} alt="#"/>
+                        <h3 className={'mb15'}>Mongo DB</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>
                     </article>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        <img src={js} alt="#"/>
+                        <h3 className={'mb15'}>JavaScript</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>
                     </article>
                     <article className={'mini'}>
-                        <AcUnitIcon/>
-                        <h3 className={'mb15'}>Project Milestones</h3>
+                        <img src={vue} alt="#"/>
+                        <h3 className={'mb15'}>Vue JS</h3>
                         <p className={'titleData mb25'}>
                             Track progress across custom flows for your team. Find the right balance for the user, privacy and security.
                         </p>

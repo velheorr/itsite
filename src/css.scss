@@ -1,17 +1,23 @@
 header {
     margin: 10px 20px 0px 20px;
-    background-color: #101828;
+    /*background-color: #101828;
     border-radius: 1rem;
-    gap: 0.27rem;
+    gap: 0.27rem;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: .1rem solid #242f3f;
-    height: 40px;
+    border-bottom: .1rem solid #242f3f;
+    height: 60px;
     padding: 0 10px;
     position: relative;
-    .logo {
 
+    z-index: 1000;
+
+    .logo {
+        font-weight: 600;
+        padding-left: 10px;
+        font-size: 24px;
+        text-shadow: 5px 5px 5px black;
     }
     .menu {
         ul{
