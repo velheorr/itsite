@@ -11,7 +11,7 @@ const Footer = () => {
                     <div style={{marginTop: '15px'}}>
                         <h5>614007, Пермский край, г Пермь, ул 25 Октября, д. 72, офис 4в </h5>
                         <h5>тел. <a href="tel:+79082661756">+7 (908) 266 17 56</a></h5>
-                        <h5>email: <a href="mailto:sel@grdn.ru">sel@grdn.ru</a></h5>
+                        <h5>email: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a></h5>
                     </div>
                     <div style={{marginTop: '15px'}}>
                         <YMap/>

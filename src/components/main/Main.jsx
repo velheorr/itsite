@@ -31,7 +31,7 @@ const Main = () => {
                 <h1 className={'titleText'} style={{fontSize: '3rem'}}>1</h1>
                 <p className={'titleData ml25 tal'}>
                     Услуги по разработке, адаптации, модификации и сопровождению информационных систем
-                    и программных продуктов на платформе 1с Предприятие
+                    и программных продуктов на платформе 1С:Предприятие
                 </p>
             </section>
             <section className={'mb70 mt70 gFlex'} data-aos="zoom-in-up">
@@ -79,19 +79,28 @@ const Main = () => {
                 </p>
                 <div className={'blocks'} style={{marginTop: '20px'}}>
                     <article className={'mini'}>
-                        <img src={react} alt="#"/>
-                        <h3 className={'mb15'}>React</h3>
-                        <p className={'titleData mb25'}>
-                            Библиотека JavaScript для создания пользовательских интерфейсов, особенно одностраничных приложений (SPA). Работает на стороне клиента.
-                        </p>
-                    </article>
-                    <article className={'mini'}>
                         <img src={one1c} alt="#"/>
                         <h3 className={'mb15'}>1c</h3>
                         <p className={'titleData mb25'}>
                             Система программного обеспечения для автоматизации бухгалтерского учета, управления бизнесом и ERP. Широко используется в России и СНГ.
                         </p>
                     </article>
+                    <article className={'mini'}>
+                        <img src={js} alt="#"/>
+                        <h3 className={'mb15'}>JavaScript</h3>
+                        <p className={'titleData mb25'}>
+                            Язык программирования, используемый в веб-разработке для добавления динамики к страницам. Поддерживается всеми современными браузерами.
+                        </p>
+                    </article>
+
+                    <article className={'mini'}>
+                        <img src={react} alt="#"/>
+                        <h3 className={'mb15'}>React</h3>
+                        <p className={'titleData mb25'}>
+                            Библиотека JavaScript для создания пользовательских интерфейсов, особенно одностраничных приложений (SPA). Работает на стороне клиента.
+                        </p>
+                    </article>
+
                     <article className={'mini'}>
                         <img src={node} alt="#"/>
                         <h3 className={'mb15'}>Node JS</h3>
@@ -106,13 +115,7 @@ const Main = () => {
                             NoSQL база данных, хранит данные в виде документов (в формате BSON), гибкая и масштабируемая, часто используется в связке с Node.js.
                         </p>
                     </article>
-                    <article className={'mini'}>
-                        <img src={js} alt="#"/>
-                        <h3 className={'mb15'}>JavaScript</h3>
-                        <p className={'titleData mb25'}>
-                            Язык программирования, используемый в веб-разработке для добавления динамики к страницам. Поддерживается всеми современными браузерами.
-                        </p>
-                    </article>
+
                     <article className={'mini'}>
                         <img src={vue} alt="#"/>
                         <h3 className={'mb15'}>Vue JS</h3>

@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import {useEffect} from "react";
 import AOS from "aos";
 import Footer2 from "./components/footer2/Footer2.jsx";
+import Cookie from "./Cookie/Cookie.jsx";
 
 function App() {
     useEffect(()=>{
@@ -21,6 +22,7 @@ function App() {
 
         <Footer/>
         <Footer2/>
+        <Cookie/>
     </>
   )
 }
