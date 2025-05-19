@@ -8,12 +8,7 @@ const Header = () => {
                 {/*<a href="">
                     <img src="" alt=""/>
                 </a>*/}
-                Guardian Digital
-            </div>
-            <div className={'menu'}>
-                <ul>
-                    {/*<li>menu</li>*/}
-                </ul>
+                GuarDiGiLab
             </div>
         </header>
     );

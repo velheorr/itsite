@@ -1,10 +1,7 @@
 header {
     margin: 10px 20px 0px 20px;
-    /*background-color: #101828;
-    border-radius: 1rem;
-    gap: 0.27rem;*/
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: .1rem solid #242f3f;
     height: 60px;
@@ -16,7 +13,7 @@ header {
     .logo {
         font-weight: 600;
         padding-left: 10px;
-        font-size: 24px;
+        font-size: 28px;
         text-shadow: 5px 5px 5px black;
     }
     .menu {
@@ -43,8 +40,19 @@ $gradienTXTmini: linear-gradient(90deg, #615fff, #c6d2ff);
 .mb15 {margin-bottom: 15px}
 .mb25 {margin-bottom: 25px}
 .mb50 {margin-bottom: 50px}
+.mb70 {margin-bottom: 70px}
 .mt20 {margin-top: 20px}
 .mt50 {margin-top: 50px}
+.mt70 {margin-top: 70px}
+.ml25 {margin-left: 25px;}
+.tal {text-align: left;}
+
+
+.gFlex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 
 main {
     background-repeat: no-repeat;
@@ -112,7 +120,7 @@ main {
 
 footer {
     border-top: .1rem solid #242f3f;
-    height: 210px;
+    height: 350px;
     padding-top: 25px;
     .footer {
 
@@ -121,13 +129,12 @@ footer {
         max-width: 90%;
         margin:auto;
         justify-content: space-around;
-        ul {
-            list-style: none;
-            a {
-                font-weight: 400;
-            }
-        }
     }
 }
 
-
+.footer2 {
+    border-top: .1rem solid #242f3f;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
