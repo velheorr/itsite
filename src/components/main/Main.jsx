@@ -54,7 +54,7 @@ const Main = () => {
 
 
 
-            <section className={'mb70'} data-aos="zoom-in-up">
+            {/*<section className={'mb70'} data-aos="zoom-in-up">
                 <div className={'s2Title titleData mb25'}>Tailored Workflows</div>
                 <h2 className={'titleText mb15'}>Map your product journey</h2>
                 <p className={'titleData mb25'}>
@@ -69,25 +69,8 @@ const Main = () => {
                             Streamline the product development flow with a content platform that's aligned across specs and insights.
                         </p>
                     </article>
-                    <article className={'big'}>
-                        <div className={'titleData '}>
-                            <span className={'blockBadge'}>Scale Instantly</span>
-                        </div>
-                        <p className="titleText mt20">
-                            Streamline the product development flow with a content platform that's aligned across specs and insights.
-                        </p>
-                    </article>
-                    <article className={'big'}>
-                        <div className={'titleData '}>
-                            <span className={'blockBadge'}>Tailored Flows</span>
-                        </div>
-                        <p className="titleText mt20">
-                            Streamline the product development flow with a content platform that's aligned across specs and insights.
-                        </p>
-                    </article>
-
-                </div>
-            </section>
+                 </div>
+            </section>*/}
             <section className={'mb70'} data-aos="fade-down">
                 <div className={'s2Title titleData mb25'}>Стек используемого ПО</div>
                 <h2 className={'titleText mb15'}>Мы используем современные инструменты и технологии для создания эффективных решений:</h2>

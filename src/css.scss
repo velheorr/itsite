@@ -7,15 +7,44 @@ header {
     height: 60px;
     padding: 0 10px;
     position: relative;
-
     z-index: 1000;
 
     .logo {
         font-weight: 600;
         padding-left: 10px;
-        font-size: 28px;
-        text-shadow: 5px 5px 5px black;
+        font-size: 38px;
     }
+
+    .neon-text {
+        font-size: 3rem;
+        font-family: monospace;
+        color: #00ffe7;
+        text-shadow:
+                0 0 5px #00ffe7,
+                0 0 10px #00ffe7,
+                0 0 20px #00ffe7,
+                0 0 40px #00ffe7;
+        animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            opacity: 1;
+            text-shadow:
+                    0 0 5px #00ffe7,
+                    0 0 10px #00ffe7,
+                    0 0 20px #00ffe7,
+                    0 0 40px #00ffe7;
+        }
+
+        20%, 24%, 55% {
+            opacity: 0.4;
+            text-shadow: none;
+        }
+    }
+
+
+
     .menu {
         ul{
             list-style: none;
@@ -120,15 +149,14 @@ main {
 
 footer {
     border-top: .1rem solid #242f3f;
-    height: 350px;
     padding-top: 25px;
     .footer {
-
         display: flex;
         flex-wrap: wrap;
         max-width: 90%;
         margin:auto;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 30px;
     }
 }
 
@@ -137,4 +165,5 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 25px;
 }
