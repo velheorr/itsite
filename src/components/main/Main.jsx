@@ -52,7 +52,13 @@ const Main = () => {
                 </p>
             </section>
 
-
+            <section className={'mt70 mb70'} data-aos="fade-down">
+                <h1 className={'titleText mb15'}>Стоимость</h1>
+                <p className={'titleData tal'}>
+                    Стоимость наших услуг определяется индивидуально, в зависимости от ваших задач и требований. Чтобы уточнить расчёт стоимости, вы можете связаться с нами
+                    <a href="tel:+79082661756">+7 (908) 266 17 56</a> или отправить запрос на электронную почту: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a>
+                </p>
+            </section>
 
             {/*<section className={'mb70'} data-aos="zoom-in-up">
                 <div className={'s2Title titleData mb25'}>Tailored Workflows</div>
