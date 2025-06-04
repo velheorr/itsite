@@ -1,0 +1,38 @@
+import React from 'react';
+import '../../css.scss'
+
+const GuarDigiDesk = () => {
+    return (
+        <div className={'digiDesk'}>
+            <section className={'mb70 mt70 mainTxt'} data-aos="zoom-in-up">
+                “GuarDiGiDesk”— это система для автоматизации процесса обнаружения инцидентов, оркестрации процессов реагирования на них,
+                накопления и систематизации знаний, а также предиктивной аналитики в работе промышленного оборудования и систем безопасности
+            </section>
+            <section className={'mt70 mb70 topik'} data-aos="fade-down">
+                <h1 className={'mb15'}>Функциональные возможности программы:</h1>
+                <ul>
+                    <li>автоматизация учёта и обработки данных</li>
+                    <li>управление операциями (планирование и оптимизация рабочих процессов, координация задач и ресурсов)</li>
+                    <li>формирование документов, статистики, аналитических и предиктивных данных</li>
+                </ul>
+            </section>
+            <section className={'mt70 mb70'} data-aos="fade-down" style={{textAlign: 'right'}}>
+                <h1 className={'mb15'}>Пользовательская документация:</h1>
+                <ul style={{listStyle: 'none'}}>
+                    <li><a href="/guardigidesk/Инструкция по установке ПО.pdf">Инструкция по установке</a></li>
+                    <li><a href="/guardigidesk/Инструкция по эксплуатации .pdf">Инструкция по эксплуатации</a></li>
+                    <li><a href="/guardigidesk/Описание_функциональных_характеристик_ПО_.pdf">Описание функциональных характеристик ПО</a></li>
+                </ul>
+            </section>
+            <section className={'mt70 mb70 topik'} data-aos="fade-down">
+                <h1 className={'mb15'}>Стоимость:</h1>
+                <p className={'titleData tal'}>
+                    Стоимость программного обеспечения определяется конфигурацией оборудования и количеством пользователей системы.
+                    Для получения подробной информации по стоимости, пожалуйста, свяжитесь с нами по электронной почте: <a href="mailto:sales@guardigilab.ru">sales@guardigilab.ru</a>
+                </p>
+            </section>
+        </div>
+    );
+};
+
+export default GuarDigiDesk;

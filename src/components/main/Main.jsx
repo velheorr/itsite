@@ -1,18 +1,18 @@
 import '../../css.scss'
-import page from '../../assets/img/page.svg'
 import react from '../../assets/react.png'
 import one1c from '../../assets/one1c.png'
 import node from '../../assets/node.png'
 import mongo from '../../assets/mongo.png'
 import js from '../../assets/js.png'
 import vue from '../../assets/vue.png'
+import {Link} from "react-router";
 
 
 const Main = () => {
 
 
     return (
-        <main style={{backgroundImage: `url(${page})`}}>
+        <>
             <section className={'mb70 mt70'} data-aos="zoom-in-up">
                 <h1 className={'titleText mb15'}>Разработка програмного обеспечения</h1>
                 <p className={'titleData mb25'}>
@@ -51,6 +51,14 @@ const Main = () => {
                     Учет специфики вашего бизнеса: уникальный дизайн, интеграции, автоматизация процессов.
                 </p>
             </section>
+            <section className={'mb70 mt70 gFlex'} data-aos="zoom-in-up">
+                <h1 className={'titleText'} style={{fontSize: '3rem'}}>4</h1>
+                <p className={'titleData ml25 tal'}>
+                    Наш флагманский продукт <Link to="/GuarDigiDesk">«GuarDiGiDesk»</Link>  — ведущий на рынке промышленной автоматизации, обеспечивающий автоматическое реагирование на сбои оборудования,
+                    минимизацию простоев и оптимизацию рабочих процессов за счет интеграции систем мониторинга и управления инцидентами
+                </p>
+            </section>
+
 
             <section className={'mt70 mb70'} data-aos="fade-down">
                 <h1 className={'titleText mb15'}>Стоимость</h1>
@@ -131,7 +139,7 @@ const Main = () => {
                     </article>
                 </div>
             </section>
-        </main>
+        </>
     );
 };
 

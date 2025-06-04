@@ -7,6 +7,11 @@ import {useEffect} from "react";
 import AOS from "aos";
 import Footer2 from "./components/footer2/Footer2.jsx";
 import Cookie from "./Cookie/Cookie.jsx";
+import {Route, Routes} from "react-router";
+import RootLayout from "./RootLayout.jsx";
+import GuarDigiDesk from "./pages/GuarDigiDesk/GuarDigiDesk.jsx";
+
+
 
 function App() {
     useEffect(()=>{
@@ -18,7 +23,12 @@ function App() {
   return (
     <>
         <Header/>
-        <Main/>
+        <Routes>
+            <Route path="/" element={<RootLayout />}>
+                <Route index element={<Main />} />
+                <Route path={'GuarDigiDesk'} element={<GuarDigiDesk />} />
+            </Route>
+        </Routes>
 
         <Footer/>
         <Footer2/>
