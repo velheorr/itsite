@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../../css.scss'
+import {useLocation} from "react-router";
 
 const GuarDigiDesk = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <div className={'digiDesk'}>
             <section className={'mb70 mt70 mainTxt'} data-aos="zoom-in-up">
