@@ -5,7 +5,8 @@ import './css.scss'
 
 const RootLayout = () => {
     return (
-        <main style={{backgroundImage: `url(${page})`}}>
+        /*<main style={{backgroundImage: `url(${page})`}} className={'bg'}>*/
+        <main  className={'bg'}>
             <Outlet/>
         </main>
     );

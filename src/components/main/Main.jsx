@@ -6,13 +6,17 @@ import mongo from '../../assets/mongo.png'
 import js from '../../assets/js.png'
 import vue from '../../assets/vue.png'
 import {Link} from "react-router";
-
+import gdl from '/public/gdl.png'
 
 const Main = () => {
 
 
     return (
         <>
+           {/* <section className={'mt70'} data-aos="zoom-in-up">
+                <img src={gdl} alt="" width={'450px'}/>
+            </section>*/}
+
             <section className={'mb70 mt70'} data-aos="zoom-in-up">
                 <h1 className={'titleText mb15'}>Разработка програмного обеспечения</h1>
                 <p className={'titleData mb25'}>
@@ -60,8 +64,10 @@ const Main = () => {
             </section>
 
 
-            <section className={'mt70 mb70'} data-aos="fade-down">
+            <section className={'mt70'} data-aos="zoom-in-up">
                 <h1 className={'titleText mb15'}>Стоимость</h1>
+            </section>
+            <section className={'mb70'} data-aos="zoom-in-up">
                 <p className={'titleData tal'}>
                     Стоимость наших услуг определяется индивидуально, в зависимости от ваших задач и требований. Чтобы уточнить расчёт стоимости, вы можете связаться с нами
                     <a href="tel:+79082661756">+7 (908) 266 17 56</a> или отправить запрос на электронную почту: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a>
@@ -85,7 +91,7 @@ const Main = () => {
                     </article>
                  </div>
             </section>*/}
-            <section className={'mb70'} data-aos="fade-down">
+            <section className={'mb70'} data-aos="fade-down" style={{textAlign: 'center'}}>
                 <div className={'s2Title titleData mb25'}>Стек используемого ПО</div>
                 <h2 className={'titleText mb15'}>Мы используем современные инструменты и технологии для создания эффективных решений:</h2>
                 <p className={'titleData mb25'}>

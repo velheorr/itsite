@@ -4,7 +4,7 @@ header {
     justify-content: center;
     align-items: center;
     border-bottom: .1rem solid #242f3f;
-    height: 60px;
+    height: 350px;
     padding: 0 10px;
     position: relative;
     z-index: 1000;
@@ -81,6 +81,10 @@ $gradienTXTmini: linear-gradient(90deg, #615fff, #c6d2ff);
     display: flex;
     align-items: center;
     width: 100%;
+}
+
+.bg {
+    background-color: rgb(0 0 0 / 0%);
 }
 
 main {
