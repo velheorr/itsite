@@ -1,19 +1,23 @@
 header {
-    margin: 10px 20px 0px 20px;
+    /*margin: 10px 20px 0px 20px;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: .1rem solid #242f3f;
-    height: 350px;
+    border-bottom: .1rem solid #d0d0d0;
+    height: 430px;
     padding: 0 10px;
     position: relative;
     z-index: 1000;
 
-    .logo {
+    /*.logo {
+        margin-top: 40px;
+    }*/
+
+    /*.logo {
         font-weight: 600;
         padding-left: 10px;
         font-size: 38px;
-    }
+    }*/
 
     .neon-text {
         font-size: 3rem;
@@ -56,23 +60,28 @@ $gradienTXT: linear-gradient(to right, #c6d2ff 65%, #ffffff);
 $gradienTXTmini: linear-gradient(90deg, #615fff, #c6d2ff);
 
 .titleText {
-    background: $gradienTXT;
+    /*background: $gradienTXT;
     color: #0000;
-    background-clip: text;
+    background-clip: text;*/
+    color: rgb(120 202 111);
 }
 .titleData {
-
     background: $gradienTXTmini;
     background-clip: text;
 }
 
+.ml10 {margin-left: 10%}
+.ml15 {margin-left: 15%}
 .mb15 {margin-bottom: 15px}
 .mb25 {margin-bottom: 25px}
 .mb50 {margin-bottom: 50px}
 .mb70 {margin-bottom: 70px}
+.mb100 {margin-bottom: 100px}
 .mt20 {margin-top: 20px}
+.mt40 {margin-top: 40px}
 .mt50 {margin-top: 50px}
 .mt70 {margin-top: 70px}
+.mt100 {margin-top: 100px}
 .ml25 {margin-left: 25px;}
 .tal {text-align: left;}
 
@@ -94,9 +103,11 @@ main {
     flex-direction: column;
     flex-grow: 1;
     position: relative;
+    padding: 0 25px;
+    max-width: 100%;
     section {
-        max-width: 90%;
-        margin: auto;
+
+        /*margin: auto;*/
         .s2Title{
             &:before, &:after {
                 content: "";
@@ -141,6 +152,9 @@ main {
             >article.mini {
                 width: 30%;
                 text-align: left;
+                h3 {
+                    color: rgb(18 24 112);
+                }
                 >svg {
                     color: #615fff;
                 }
@@ -151,7 +165,7 @@ main {
 }
 
 footer {
-    border-top: .1rem solid #242f3f;
+    border-top: .1rem solid #d0d0d0;
     padding-top: 25px;
     .footer {
         display: flex;
@@ -160,11 +174,14 @@ footer {
         margin:auto;
         justify-content: space-between;
         gap: 30px;
+        h3{
+            color: rgb(18 24 112);
+        }
     }
 }
 
 .footer2 {
-    border-top: .1rem solid #242f3f;
+    border-top: .1rem solid #d0d0d0;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -189,6 +206,9 @@ footer {
     }
 }
 
+.cgreen {
+    color: rgb(120 202 111);
+}
 .digiDesk {
     font-size: 1rem;
     ul {
@@ -201,6 +221,6 @@ footer {
     .topik {
         padding: 34px;
         border-radius: 10px;
-        background-color: #20214e;
+        background-color: #e8e8e8;
     }
 }

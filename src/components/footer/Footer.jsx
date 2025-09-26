@@ -4,7 +4,8 @@ import YMap from "../footer2/Map.jsx";
 
 const Footer = () => {
     return (
-        <footer style={{backgroundImage: `url(${page})`}}>
+        /*<footer style={{backgroundImage: `url(${page})`}}>*/
+        <footer>
             <div className={'footer'} data-aos="fade-up">
                 <div style={{}}>
                     <h3>Контакты</h3>
