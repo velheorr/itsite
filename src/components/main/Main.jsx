@@ -63,7 +63,9 @@ const Main = () => {
             <section className={'mb50 gFlex'} data-aos="zoom-in-up">
                 <h1 className={'titleText ml10'} style={{fontSize: '4rem'}}>4</h1>
                 <p className={'titleData ml25 tal'}>
-                    Наш флагманский продукт <Link to="/GuarDigiDesk">«GuarDiGiDesk»</Link> — ведущая платформа для интеллектуальной автоматизации сервисных операций
+                    Наш флагманский продукт <Link to="/GuarDigiDesk">"GuarDiGiDesk®"</Link>  (<Link to="https://reestr.digital.gov.ru/reestr/3583814/">под номером 29225 от 20.08.2025 в Реестре
+                    Российского ПО</Link>) — ведущая платформа для
+                    интеллектуальной автоматизации сервисных операций
                     и Service Desk, обеспечивающая автоматическое реагирование на сбои оборудования, минимизацию простоев и оптимизацию рабочих процессов за счет
                     интеграции систем мониторинга и управления инцидентами.
                 </p>

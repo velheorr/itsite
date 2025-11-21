@@ -13,7 +13,7 @@ const GuarDigiDesk = () => {
     return (
         <div className={'digiDesk'}>
             <section className={'mb70 mt70 mainTxt'} data-aos="zoom-in-up">
-                “GuarDiGiDesk”— это система для автоматизации процесса обнаружения инцидентов, оркестрации процессов реагирования на них,
+                "GuarDiGiDesk®"— это система для автоматизации процесса обнаружения инцидентов, оркестрации процессов реагирования на них,
                 накопления и систематизации знаний, а также предиктивной аналитики в работе промышленного оборудования и систем безопасности
             </section>
             <section className={'mt70 mb70 topik'} data-aos="fade-down">
@@ -32,6 +32,16 @@ const GuarDigiDesk = () => {
                     <li><a href="/guardigidesk/Описание_функциональных_характеристик_ПО_.pdf">Описание функциональных характеристик ПО</a></li>
                 </ul>
             </section>
+
+            <section className={'mt70 mb70'} data-aos="fade-down" style={{textAlign: 'left'}}>
+                <h1 className={'mb15 cgreen'}>Информация о правообладателях:</h1>
+                <ul style={{listStyle: 'none'}}>
+                    <li><a href="/guardigidesk/ООО_ГардианДиджиЛаб_GuarDiGiDesk_2025664429О_ЭВМ.pdf">Свидетельство о государственной регистрации программы для ЭВМ</a></li>
+                    <li><a href="/guardigidesk/ТовЗнак_GDD.pdf">Свидетельство на товарный знак</a></li>
+
+                </ul>
+            </section>
+
             <section className={'mt70 mb70 topik'} data-aos="fade-down">
                 <h1 className={'mb15 cgreen'}>Стоимость:</h1>
                 <p className={'titleData tal'}>
