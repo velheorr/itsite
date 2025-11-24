@@ -1,48 +1,55 @@
-import '../../css.scss'
-import page from '../../assets/img/page.svg'
+import React from 'react';
+import { Grid, Row, Col, Panel, Divider } from 'rsuite';
 import YMap from "../footer2/Map.jsx";
+import './Footer.scss';
 
 const Footer = () => {
     return (
-        /*<footer style={{backgroundImage: `url(${page})`}}>*/
-        <footer>
-            <div className={'footer'} data-aos="fade-up">
-                <div style={{}}>
-                    <h3>Контакты</h3>
-                    <div style={{marginTop: '15px'}}>
-                        <h5>614007, Пермский край, г Пермь, ул 25 Октября, д. 72, офис 4в </h5>
-                        <h5>тел. <a href="tel:+79082661756">+7 (908) 266 17 56</a></h5>
-                        <h5>email: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a></h5>
+        <footer className="app-footer">
+            <Grid fluid className="footer-grid">
+            <Row gutter={30}>
+                <Col xs={24} md={8}>
+                <Panel header="Контакты" bordered className="footer-panel">
+                    <p className="footer-text">
+                    614007, Пермский край, г Пермь, ул 25 Октября, д. 72, офис 4в
+                    </p>
+                    <p className="footer-text">
+                    тел. <a href="tel:+79082661756">+7 (908) 266 17 56</a>
+                    </p>
+                    <p className="footer-text">
+                    email: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a>
+                    </p>
+                    <div className="map-wrapper">
+                    <YMap />
                     </div>
-                    <div style={{marginTop: '15px'}}>
-                        <YMap/>
-                    </div>
-                </div>
-                <div style={{maxWidth: '500px'}}>
-                    <h3>Виды деятельности</h3>
-                    <div style={{marginTop: '15px'}}>
-                    <h5>62.01 Разработка компьютерного программного обеспечения</h5>
-                    </div>
-                    <div style={{marginTop: '15px'}}>
-                        <h5>Дополнительные виды деятельности</h5>
-                        <h5>46.51 Торговля оптовая компьютерами, периферийными устройствами к компьютерам и программным обеспечением</h5>
-                        <h5>62.02 Деятельность консультативная и работы в области компьютерных технологий</h5>
-                        <h5>62.03 Деятельность по управлению компьютерным оборудованием</h5>
-                        <h5>62.09 Деятельность, связанная с использованием вычислительной техники и информационных технологий, прочая</h5>
-                        <h5>63.11.1 Деятельность по созданию и использованию баз данных и информационных ресурсов</h5>
-                        <h5>95.11 Ремонт компьютеров и периферийного компьютерного оборудования</h5>
-                    </div>
+                </Panel>
+                </Col>
 
-                </div>
-                <div style={{}}>
-                    <h3>Реквизиты</h3>
-                    <div style={{marginTop: '15px'}}>
-                        <h5>ИНН 5904414903</h5>
-                        <h5>КПП 590401001</h5>
-                        <h5>ОГРН 1255900007560</h5>
-                    </div>
-                </div>
-            </div>
+                <Col xs={24} md={8}>
+                <Panel header="Виды деятельности" bordered className="footer-panel">
+                    <p className="footer-text">62.01 Разработка компьютерного программного обеспечения</p>
+                    <Divider style={{ margin: '10px 0' }} />
+                    <h5 style={{ margin: '10px 0 5px' }}>Дополнительные виды деятельности</h5>
+                    <ul className="activity-list">
+                    <li>46.51 Торговля оптовая компьютерами, периферийными устройствами к компьютерам и программным обеспечением</li>
+                    <li>62.02 Деятельность консультативная и работы в области компьютерных технологий</li>
+                    <li>62.03 Деятельность по управлению компьютерным оборудованием</li>
+                    <li>62.09 Деятельность, связанная с использованием вычислительной техники и информационных технологий, прочая</li>
+                    <li>63.11.1 Деятельность по созданию и использованию баз данных и информационных ресурсов</li>
+                    <li>95.11 Ремонт компьютеров и периферийного компьютерного оборудования</li>
+                    </ul>
+                </Panel>
+                </Col>
+
+                <Col xs={24} md={8}>
+                <Panel header="Реквизиты" bordered className="footer-panel">
+                    <p className="footer-text">ИНН 5904414903</p>
+                    <p className="footer-text">КПП 590401001</p>
+                    <p className="footer-text">ОГРН 1255900007560</p>
+                </Panel>
+                </Col>
+            </Row>
+            </Grid>
         </footer>
     );
 };

@@ -221,3 +221,175 @@ footer {
         background-color: #e8e8e8;
     }
 }
+
+@media (max-width: 992px) {
+    .gFlex {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .gFlex h1 {
+      font-size: 3rem !important;
+    }
+  
+    .blocks {
+      flex-direction: column;
+      align-items: center;
+  
+      > article.mini,
+      > article.big {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ml10 { margin-left: 5% !important; }
+    .ml15 { margin-left: 5% !important; }
+    .ml25 { margin-left: 0 !important; }
+  
+    .titleText { font-size: 2rem !important; }
+    h1 { font-size: 2.2rem !important; }
+  
+    .mb70 { margin-bottom: 40px !important; }
+    .mt70 { margin-top: 40px !important; }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      height: 300px;
+      padding: 0 15px;
+  
+      .logo img {
+        width: 280px !important;
+      }
+    }
+  
+    .cookie > div {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      gap: 15px;
+    }
+  }
+
+  .main-content {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    margin: 0;
+  }
+  
+  .offers-grid {
+    margin-top: 40px;
+  }
+  
+  .offer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+  
+  .offer-number {
+    font-size: 4rem;
+    flex-shrink: 0;
+  }
+  
+  .price-panel {
+    max-width: 700px;
+    padding: 30px;
+    background: #f0f8f0;
+    border-radius: 12px;
+  }
+  
+  .tech-card {
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .tech-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+  
+  .tech-card h3 {
+    margin: 12px 0;
+    color: rgb(18 24 112);
+    font-size: 1.1rem;
+  }
+  
+  .tech-card .titleData {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 992px) {
+    .gFlex {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .offer-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .offer-number {
+      font-size: 3rem;
+    }
+  
+    .blocks {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .blocks > article.mini {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .ml10, .ml15, .ml25 {
+      margin-left: 0 !important;
+    }
+  
+    .titleText {
+      font-size: 2rem !important;
+    }
+  
+    .titleData {
+      font-size: 1rem;
+    }
+  
+    .mb70 { margin-bottom: 40px !important; }
+    .mt70 { margin-top: 40px !important; }
+    .mb50 { margin-bottom: 30px !important; }
+  }
+  
+  @media (max-width: 480px) {
+    .offer-number {
+      font-size: 2.5rem;
+    }
+  
+    .section {
+      margin-bottom: 30px !important;
+    }
+  
+    .tech-card .titleData {
+      font-size: 0.9rem;
+    }
+  }

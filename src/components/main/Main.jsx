@@ -1,3 +1,5 @@
+import React from 'react';
+import { Grid, Row, Col, Panel } from 'rsuite';
 import '../../css.scss'
 import react from '../../assets/react.png'
 import one1c from '../../assets/one1c.png'
@@ -11,14 +13,11 @@ import docker from '../../assets/docker.png'
 import postgre from '../../assets/postgre.png'
 
 const Main = () => {
-
-
     return (
-        <>
-
-            <section className={'mb70 mt100'} data-aos="zoom-in-up">
-                <h1 className={'titleText mb15'}>Разработка программного обеспечения</h1>
-                <p className={'titleData mb25 ml10'}>
+    <div className="main-content">
+            <section className="section mb70 mt100" data-aos="zoom-in-up">
+                <h1 className="titleText mb15">Разработка программного обеспечения</h1>
+                <p className="titleData">
                     Мы — команда экспертов с системным подходом к IT-решениям, которая трансформирует бизнес с помощью технологий,
                     адаптированных под динамичные требования рынка . Наши компетенции включают разработку масштабируемых программных продуктов,
                     интеграцию отказоустойчивых систем и создание цифровых решений, которые не только решают текущие задачи, но и задают вектор для долгосрочного роста.
@@ -28,143 +27,144 @@ const Main = () => {
                 </p>
             </section>
 
+        <section className="section mt40" data-aos="zoom-in-up">
+        <h1 className="titleText mb15">Мы предлагаем</h1>
+        </section>
 
-
-            <section className={'mt40'} data-aos="zoom-in-up">
-                <h1 className={'titleText mb15'}>Мы предлагаем</h1>
-            </section>
-            <section className={'mb50 gFlex '} data-aos="zoom-in-up">
-                <h1 className={'titleText ml10'} style={{fontSize: '4rem'}}>1</h1>
-                <p className={'titleData ml25 tal'}>
+        <Grid fluid className="offers-grid">
+            <Row gutter={20}>
+            <Col xs={24} lg={12} className="mb50" data-aos="zoom-in-up">
+                <div className="offer-item">
+                <h1 className="titleText offer-number">1</h1>
+                <p className="titleData tal">
                     Услуги по разработке, адаптации, модификации и сопровождению информационных систем
                     и программных продуктов на платформе 1С:Предприятие
                 </p>
-            </section>
-            <section className={'mb50 gFlex '} data-aos="zoom-in-up">
-                <h1 className={'titleText ml10'} style={{fontSize: '4rem'}}>2</h1>
-                <p className={'titleData ml25 tal'}>
+                </div>
+            </Col>
+            <Col xs={24} lg={12} className="mb50" data-aos="zoom-in-up">
+                <div className="offer-item">
+                <h1 className="titleText offer-number">2</h1>
+                <p className="titleData tal">
                     Внедрение «умных» решений на основе искусственного интеллекта для автоматизации и оптимизации бизнес-процессов.
                     Мы помогаем бизнесу использовать ИИ, чтобы быстрее и точнее обрабатывать данные, принимать точные и оперативные решения и сокращать затраты.
                     Наши специалисты имеют глубокие знания в разработке моделей, обработке данных (Data Engineering) и масштабировании решений, что гарантирует
                     высокую производительность и надежность систем
-
                 </p>
-            </section>
-            <section className={'mb50 gFlex'} data-aos="zoom-in-up">
-                <h1 className={'titleText ml10'} style={{fontSize: '4rem'}}>3</h1>
-                <p className={'titleData ml25 tal'}>
+                </div>
+            </Col>
+            <Col xs={24} lg={12} className="mb50" data-aos="zoom-in-up">
+                <div className="offer-item">
+                <h1 className="titleText offer-number">3</h1>
+                <p className="titleData tal">
                     Разработку высокопроизводительных веб-приложений для создания интерактивных сервисов, CRM, ERP-систем и внутренних платформ управления с
                     применением React, Vue.js, Node.js и микросервисных архитектур. Наши решения обеспечивают гибкую масштабируемость, кроссплатформенную совместимость и
                     оптимальную производительность, адаптированную под специфику вашей отрасли — от финтеха до промышленности. Экспертная реализация решений сочетает
                     персонализированный UX/UI-дизайн , интеграцию с существующими системами (включая legacy-инфраструктуру)
                     и автоматизацию ключевых бизнес-процессов, минимизируя операционные затраты и повышая скорость выполнения задач
                 </p>
-            </section>
-            <section className={'mb50 gFlex'} data-aos="zoom-in-up">
-                <h1 className={'titleText ml10'} style={{fontSize: '4rem'}}>4</h1>
-                <p className={'titleData ml25 tal'}>
-                    Наш флагманский продукт <Link to="/GuarDigiDesk">"GuarDiGiDesk®"</Link>  (<Link to="https://reestr.digital.gov.ru/reestr/3583814/">под номером 29225 от 20.08.2025 в Реестре
+                </div>
+            </Col>
+            <Col xs={24} lg={12} className="mb50" data-aos="zoom-in-up">
+                <div className="offer-item">
+                <h1 className="titleText offer-number">4</h1>
+                <p className="titleData tal">
+                    Наш флагманский продукт <Link to="/GuarDigiDesk">"GuarDiGiDesk®"</Link>  (
+                    <Link to="https://reestr.digital.gov.ru/reestr/3583814/">под номером 29225 от 20.08.2025 в Реестре
                     Российского ПО</Link>) — ведущая платформа для
                     интеллектуальной автоматизации сервисных операций
                     и Service Desk, обеспечивающая автоматическое реагирование на сбои оборудования, минимизацию простоев и оптимизацию рабочих процессов за счет
                     интеграции систем мониторинга и управления инцидентами.
                 </p>
-            </section>
+                </div>
+            </Col>
+            </Row>
+        </Grid>
 
-
-            <section className={'mt70'} data-aos="zoom-in-up">
-                <h1 className={'titleText mb15'}>Стоимость</h1>
-            </section>
-            <section className={'mb70 titleData'} data-aos="zoom-in-up">
-                <div className='ml10'>
-                    <p>Стоимость наших услуг определяется индивидуально, в зависимости от ваших задач и требований.</p>
+        <section className="section mt70" data-aos="zoom-in-up">
+        <h1 className="titleText mb15">Стоимость</h1>
+            <Panel bordered className="price-panel">
+                <div>
+                <p>Стоимость наших услуг определяется индивидуально, в зависимости от ваших задач и требований.</p>
                     <p>Чтобы уточнить расчёт стоимости, вы можете связаться с нами:</p>
                     <p><a href="tel:+79082661756">+7 (908) 266 17 56</a></p>
                     <p>или отправить запрос на электронную почту: <a href="mailto:info@guardigilab.ru">info@guardigilab.ru</a></p>
                 </div>
+            </Panel>
+        </section>
 
-            </section>
+        <section className="section mb70" data-aos="fade-down">
+        <h1 className="titleText mb15">Стек используемого ПО</h1>
+        <div>
+            <p className="titleData">
+            Мы используем современные инструменты и технологии для создания эффективных решений:
+            </p>
+            <p className="titleData mb70">
+            Наш стек постоянно обновляется, чтобы соответствовать самым высоким стандартам и требованиям рынка.
+            </p>
+        </div>
 
-            <section className={'mb70'} data-aos="fade-down">
-                <h1 className={'titleText mb15'}>Стек используемого ПО</h1>
-                <div className="ml10">
-                    <p className={'titleData '}>Мы используем современные инструменты и технологии для создания эффективных решений:</p>
-                    <p className={'titleData mb70'}>
-                        Наш стек постоянно обновляется, чтобы соответствовать самым высоким стандартам и требованиям рынка.
-                    </p>
-                </div>
-
-                <div className={'blocks'} style={{marginTop: '20px'}}>
-                    <article className={'mini'}>
-                        <img src={one1c} alt="#"/>
-                        <h3 className={'mb15 '}>1C:Предприятие</h3>
-                        <p className={'titleData mb25'}>
-                            Система программного обеспечения для автоматизации бухгалтерского учета, управления бизнесом и ERP. Широко используется в России и СНГ.
-                        </p>
-                    </article>
-                    <article className={'mini'}>
-                        <img src={js} alt="#"/>
-                        <h3 className={'mb15 '}>JavaScript</h3>
-                        <p className={'titleData mb25'}>
-                            Язык программирования, используемый в веб-разработке для добавления динамики к страницам. Поддерживается всеми современными браузерами.
-                        </p>
-                    </article>
-
-                    <article className={'mini'}>
-                        <img src={react} alt="#"/>
-                        <h3 className={'mb15 '}>React</h3>
-                        <p className={'titleData mb25'}>
-                            Библиотека JavaScript для создания пользовательских интерфейсов, особенно одностраничных приложений (SPA). Работает на стороне клиента.
-                        </p>
-                    </article>
-
-                    <article className={'mini'}>
-                        <img src={node} alt="#"/>
-                        <h3 className={'mb15'}>Node JS</h3>
-                        <p className={'titleData mb25'}>
-                            Среда выполнения JavaScript на стороне сервера, позволяет запускать JS-код вне браузера, используется для построения серверных приложений.
-                        </p>
-                    </article>
-                    <article className={'mini'}>
-                        <img src={mongo} alt="#"/>
-                        <h3 className={'mb15'}>Mongo DB</h3>
-                        <p className={'titleData mb25'}>
-                            NoSQL база данных, хранит данные в виде документов (в формате BSON), гибкая и масштабируемая, часто используется в связке с Node.js.
-                        </p>
-                    </article>
-
-                    <article className={'mini'}>
-                        <img src={vue} alt="#"/>
-                        <h3 className={'mb15'}>Vue JS</h3>
-                        <p className={'titleData mb25'}>
-                            Прогрессивный фреймворк JavaScript для создания пользовательских интерфейсов. Легко интегрируется с другими проектами и библиотеками.
-                        </p>
-                    </article>
-
-                    <article className={'mini'}>
-                        <img src={postgre} alt="#"/>
-                        <h3 className={'mb15'}>PostgreSQL</h3>
-                        <p className={'titleData mb25'}>
-                            Бесплатная объектно-реляционная система управления базами данных (СУБД) с открытым исходным кодом, которая позволяет создавать, хранить и управлять данными с гибкостью и соблюдением стандартов SQL. Она применяется для разработки масштабных приложений, обработки больших объемов данных и обеспечения высокой производительности в сложных системах, поддерживая расширенные функции и активное сообщество разработчиков
-                        </p>
-                    </article>
-                    <article className={'mini'}>
-                        <img src={docker} alt="#"/>
-                        <h3 className={'mb15'}>Docker</h3>
-                        <p className={'titleData mb25'}>
-                            Программная платформа для разработки, доставки и запуска приложений в изолированных контейнерах, позволяющая автоматизировать их развертывание и управление через виртуализацию на уровне операционной системы. Она используется для упрощения настройки сред окружения, изоляции приложений, обеспечения согласованности между разработкой и эксплуатацией, а также масштабируемости решений
-                        </p>
-                    </article>
-                    <article className={'mini'}>
-                        <img src={figma} alt="#"/>
-                        <h3 className={'mb15'}>Figma</h3>
-                        <p className={'titleData mb25'}>
-                            Онлайн-редактор для создания графических проектов, позволяющий индивидуальным пользователям и командам разрабатывать дизайны интерфейсов, прототипы и векторные изображения в реальном времени. Она используется для проектирования пользовательских интерфейсов (UI), UX-дизайна, создания макетов сайтов и лендингов, а также обеспечивает совместную работу с возможностью обмена и редактирования файлов в облачном пространстве
-                        </p>
-                    </article>
-                </div>
-            </section>
-        </>
+        <Grid fluid>
+            <Row gutter={20}>
+            {[
+                {
+                    img: one1c,
+                    title: '1C:Предприятие',
+                    desc: 'Система программного обеспечения для автоматизации бухгалтерского учета, управления бизнесом и ERP. Широко используется в России и СНГ.',
+                },
+                {
+                    img: js,
+                    title: 'JavaScript',
+                    desc: 'Язык программирования, используемый в веб-разработке для добавления динамики к страницам. Поддерживается всеми современными браузерами.',
+                },
+                {
+                    img: react,
+                    title: 'React',
+                    desc: 'Библиотека JavaScript для создания пользовательских интерфейсов, особенно одностраничных приложений (SPA). Работает на стороне клиента.',
+                },
+                {
+                    img: node,
+                    title: 'Node JS',
+                    desc: 'Среда выполнения JavaScript на стороне сервера, позволяет запускать JS-код вне браузера, используется для построения серверных приложений.',
+                },
+                {
+                    img: mongo,
+                    title: 'Mongo DB',
+                    desc: 'NoSQL база данных, хранит данные в виде документов (в формате BSON), гибкая и масштабируемая, часто используется в связке с Node.js.',
+                },
+                {
+                    img: vue,
+                    title: 'Vue JS',
+                    desc: 'Прогрессивный фреймворк JavaScript для создания пользовательских интерфейсов. Легко интегрируется с другими проектами и библиотеками.',
+                },
+                {
+                    img: postgre,
+                    title: 'PostgreSQL',
+                    desc: 'Бесплатная объектно-реляционная система управления базами данных (СУБД) с открытым исходным кодом, которая позволяет создавать, хранить и управлять данными с гибкостью и соблюдением стандартов SQL. Она применяется для разработки масштабных приложений, обработки больших объемов данных и обеспечения высокой производительности в сложных системах, поддерживая расширенные функции и активное сообщество разработчиков',
+                },
+                {
+                    img: docker,
+                    title: 'Docker',
+                    desc: 'Программная платформа для разработки, доставки и запуска приложений в изолированных контейнерах, позволяющая автоматизировать их развертывание и управление через виртуализацию на уровне операционной системы. Она используется для упрощения настройки сред окружения, изоляции приложений, обеспечения согласованности между разработкой и эксплуатацией, а также масштабируемости решений',
+                },
+                {
+                    img: figma,
+                    title: 'Figma',
+                    desc: 'Онлайн-редактор для создания графических проектов, позволяющий индивидуальным пользователям и командам разрабатывать дизайны интерфейсов, прототипы и векторные изображения в реальном времени. Она используется для проектирования пользовательских интерфейсов (UI), UX-дизайна, создания макетов сайтов и лендингов, а также обеспечивает совместную работу с возможностью обмена и редактирования файлов в облачном пространстве',
+                },
+            ].map((tech) => (
+                <Col xs={12} sm={8} md={6} lg={4} key={tech.title} className="mb25">
+                <Panel bordered className="tech-card">
+                    <img src={tech.img} alt={tech.title} className="tech-icon" />
+                    <h3 className="mb15">{tech.title}</h3>
+                    <p className="titleData">{tech.desc}</p>
+                </Panel>
+                </Col>
+            ))}
+            </Row>
+        </Grid>
+        </section>
+    </div>
     );
 };
 
