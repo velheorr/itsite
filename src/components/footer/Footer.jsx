@@ -6,10 +6,10 @@ import './Footer.scss';
 const Footer = () => {
     return (
         <footer className="app-footer">
-            <Grid fluid className="footer-grid">
-            <Row gutter={30}>
-                <Col xs={24} md={8}>
-                <Panel header="Контакты" bordered className="footer-panel">
+            <Grid className="footer-grid">
+            <Row>
+                <Col>
+                <Panel header="Контакты" className="footer-panel">
                     <p className="footer-text">
                     614007, Пермский край, г Пермь, ул 25 Октября, д. 72, офис 4в
                     </p>
@@ -25,8 +25,8 @@ const Footer = () => {
                 </Panel>
                 </Col>
 
-                <Col xs={24} md={8}>
-                <Panel header="Виды деятельности" bordered className="footer-panel">
+                <Col>
+                <Panel header="Виды деятельности" className="footer-panel">
                     <p className="footer-text">62.01 Разработка компьютерного программного обеспечения</p>
                     <Divider style={{ margin: '10px 0' }} />
                     <h5 style={{ margin: '10px 0 5px' }}>Дополнительные виды деятельности</h5>
@@ -41,8 +41,8 @@ const Footer = () => {
                 </Panel>
                 </Col>
 
-                <Col xs={24} md={8}>
-                <Panel header="Реквизиты" bordered className="footer-panel">
+                <Col>
+                <Panel header="Реквизиты" className="footer-panel">
                     <p className="footer-text">ИНН 5904414903</p>
                     <p className="footer-text">КПП 590401001</p>
                     <p className="footer-text">ОГРН 1255900007560</p>

@@ -131,25 +131,27 @@ const Main = () => {
         </section>
 
         <section className="section mb70" data-aos="fade-down">
-        <h1 className="titleText mb15">Стек используемого ПО</h1>
-        <div>
-            <p className="titleData">
-            Мы используем современные инструменты и технологии для создания эффективных решений:
-            </p>
-            <p className="titleData mb70">
-            Наш стек постоянно обновляется, чтобы соответствовать самым высоким стандартам и требованиям рынка.
-            </p>
-        </div>
+            <h1 className="titleText mb15">Стек используемого ПО</h1>
+            <div>
+                <p className="titleData">
+                    Мы используем современные инструменты и технологии для создания эффективных решений:
+                </p>
+                <p className="titleData mb70">
+                    Наш стек постоянно обновляется, чтобы соответствовать самым высоким стандартам и требованиям рынка.
+                </p>
+            </div>
 
-        <div  spacing={20} style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {techs.map((tech) => (
-                <Panel bordered className="tech-card" key={tech.title} style={{ width: 350, flexGrow: 1 }}>
-                    <img src={tech.img} alt={tech.title} className="tech-icon" />
-                    <h3 className="mb15">{tech.title}</h3>
-                    <p className="titleData">{tech.desc}</p>
-                </Panel>
-            ))}
-        </div>
+            <div className="tech-grid">
+                {techs.map((tech) => (
+                    <div className="tech-card" key={tech.title}>
+                        <Panel bordered>
+                            <img src={tech.img} alt={tech.title} className="tech-icon" />
+                            <h3>{tech.title}</h3>
+                            <p>{tech.desc}</p>
+                        </Panel>
+                    </div>
+                ))}
+            </div>
         </section>
     </div>
     );
