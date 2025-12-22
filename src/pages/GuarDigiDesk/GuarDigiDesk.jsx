@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import '../../css.scss'
 import gdlqr1 from "../../../public/gdlqr1.png";
 import {useLocation} from "react-router";
+import {Link} from "react-router";
 
 const GuarDigiDesk = () => {
     const { pathname } = useLocation();
@@ -48,6 +49,14 @@ const GuarDigiDesk = () => {
                     Стоимость программного обеспечения определяется конфигурацией оборудования и количеством пользователей системы.
                     Для получения подробной информации по стоимости, пожалуйста, свяжитесь с нами по электронной почте: <a href="mailto:sales@guardigilab.ru">sales@guardigilab.ru</a>
                 </p>
+                <div className="calculator-cta mt50">
+                    <p className="titleData tal mb20">
+                        Для получения точного расчета с учетом всех параметров воспользуйтесь нашим онлайн-калькулятором
+                    </p>
+                    <Link to="/calculator" className="calculator-btn">
+                        Перейти к калькулятору
+                    </Link>
+                </div>
             </section>
             <section className={'mt70 mb70'} data-aos="fade-down" style={{textAlign: 'right'}}>
                 <h1 className={'mb15 cgreen'}>Следите за новостями</h1>

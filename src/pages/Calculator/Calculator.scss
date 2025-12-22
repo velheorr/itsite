@@ -1,0 +1,221 @@
+.calculator-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .calculator-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+  }
+  
+  .calculator-desc {
+    text-align: center;
+    color: #555555;
+    font-size: 17px;
+    max-width: 700px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+  }
+  
+  .calc-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    label {
+      font-weight: 600;
+      color: #333333;
+      font-size: 16px;
+    }
+  
+    input[type="number"] {
+      padding: 16px 18px;
+      font-size: 17px;
+      background: #ffffff;
+      border: 2px solid #e0e6ff;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+  
+      &:focus {
+        outline: none;
+        border-color: #4a6cf7;
+        box-shadow: 0 0 0 4px rgba(74, 108, 247, 0.15);
+      }
+  
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        opacity: 0.6;
+      }
+    }
+  
+    &.checkbox {
+      flex-direction: row;
+      align-items: center;
+      gap: 14px;
+  
+      input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        accent-color: #10b981;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 2px solid #e0e6ff;
+      }
+  
+      label {
+        cursor: pointer;
+        user-select: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: #333333;
+      }
+    }
+  }
+  
+  .calc-button {
+    margin-top: 20px;
+    padding: 18px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, #4a6cf7, #10b981);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(74, 108, 247, 0.35);
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(74, 108, 247, 0.45);
+    }
+  
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  .calc-result {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+    padding: 32px;
+    background: #ffffff;
+    border: 2px solid #e0e6ff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .result-title {
+    text-align: center;
+    font-size: 26px;
+    color: #1e3a8a;
+    margin-bottom: 28px;
+    font-weight: 700;
+  }
+  
+  .result-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.9;
+  
+    li {
+      padding: 14px 0;
+      border-bottom: 1px dashed #bbd1ff;
+  
+      &:last-child {
+        border-bottom: none;
+        margin-top: 24px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f0f5ff, #f0fdf4);
+        border-radius: 14px;
+        border: 2px solid #bbd1ff;
+        font-size: 23px;
+        font-weight: 700;
+        color: #1e40af;
+        text-align: center;
+      }
+  
+      strong {
+        color: #1e3a8a;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .calculator-container {
+      padding: 30px 16px;
+    }
+  
+    .calculator-title {
+      font-size: 28px;
+    }
+  
+    .calculator-desc {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  
+    .calc-field {
+      input[type="number"] {
+        padding: 16px;
+        font-size: 16px;
+      }
+  
+      &.checkbox label {
+        font-size: 15.5px;
+      }
+    }
+  
+    .calc-button {
+      padding: 18px;
+      font-size: 18px;
+    }
+  
+    .calc-result {
+      padding: 28px 24px;
+      margin-top: 40px;
+    }
+  
+    .result-title {
+      font-size: 24px;
+    }
+  
+    .result-list {
+      font-size: 16.5px;
+  
+      li:last-child {
+        font-size: 21px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calculator-title {
+      font-size: 24px;
+    }
+  
+    .calc-field.checkbox label {
+      font-size: 15px;
+    }
+  }

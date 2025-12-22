@@ -10,6 +10,7 @@ import Cookie from "./Cookie/Cookie.jsx";
 import {Route, Routes} from "react-router";
 import RootLayout from "./RootLayout.jsx";
 import GuarDigiDesk from "./pages/GuarDigiDesk/GuarDigiDesk.jsx";
+import Calculator from './pages/Calculator/Calculator.jsx';
 
 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<RootLayout />}>
                 <Route index element={<Main />} />
                 <Route path={'GuarDigiDesk'} element={<GuarDigiDesk />} />
+                <Route path={'calculator'} element={<Calculator />} />
             </Route>
         </Routes>
 
