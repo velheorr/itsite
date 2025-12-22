@@ -4,10 +4,11 @@ import './Calculator.scss';
 const Calculator = () => {
     const [users, setUsers] = useState(10);
     const [systems, setSystems] = useState(0);
+    const [elems, setElems] = useState(0);
     const [contractors, setContractors] = useState(0);
     const [integrationMonitoring, setIntegrationMonitoring] = useState(false);
     const [kpiControl, setKpiControl] = useState(false);
-    const [enterprises, setEnterprises] = useState(1);
+    const [enterprises, setEnterprises] = useState(0);
 
     const [result, setResult] = useState(null);
 
@@ -15,11 +16,10 @@ const Calculator = () => {
         const totalUsers = Number(users) + Number(contractors);
 
         let license = 'Standard';
-        if (enterprises > 1) {
-            license = 'Enterprise';
-        } else if (kpiControl) {
-            license = 'Corp';
-        }
+		if (totalUsers <= 50 && enterprises === 0) {license = 'Standard'}
+		else if (totalUsers <= 100 && enterprises === 0 || kpiControl) {license = 'Corp'}
+		else if (totalUsers > 100 || enterprises >= 1) {license = 'Enterprise'}
+
 
         let monthly = 0;
         let annual = 0;
@@ -33,7 +33,6 @@ const Calculator = () => {
                 annual = 3153600;
             }
             if (license === 'Enterprise') {
-                license = kpiControl ? 'Corp' : 'Standard';
                 monthly = kpiControl ? 292000 : 182000;
                 annual = kpiControl ? 3153600 : 1965600;
             }
@@ -46,7 +45,6 @@ const Calculator = () => {
                 annual = 5562000;
             }
             if (license === 'Enterprise') {
-                license = kpiControl ? 'Corp' : 'Standard';
                 monthly = kpiControl ? 515000 : 306000;
                 annual = kpiControl ? 5562000 : 3304800;
             }
@@ -56,11 +54,11 @@ const Calculator = () => {
             annual = 8676720;
         }
 
-        const integrationCost = Math.round(1590 * Number(systems) * 1.2);
+        const integrationCost = Math.round(1590 * Number(elems));
 
         let deploymentDays = 5;
         if (license === 'Corp') deploymentDays = 20;
-        if (license === 'Enterprise') deploymentDays = 2 * Number(enterprises);
+        if (license === 'Enterprise') deploymentDays =20 + ( 2 * Number(enterprises));
 
         const totalProject = annual + integrationCost;
 
@@ -72,7 +70,18 @@ const Calculator = () => {
             deploymentDays,
             totalProject: totalProject.toLocaleString('ru-RU'),
         });
+		console.log(result)
     };
+
+	const handleInputChange = (setter) => (e) => {
+		let val = e.target.value;
+		if (val.length > 1 && val.startsWith('0')) {
+			val = val.substring(1);
+		}
+		if (val === '') val = '0';
+		setter(val);
+	};
+
 
     return (
         <div className="calculator-container">
@@ -84,36 +93,40 @@ const Calculator = () => {
             <div className="calc-form">
                 <div className="calc-field">
                     <label>Количество пользователей</label>
-                    <input type="number" min="0" value={users} onChange={(e) => setUsers(e.target.value || 0)} />
+                    <input type="number" min="1" value={users}
+						   onChange={handleInputChange(setUsers)}
+					/>
+                </div>
+
+				<div className="calc-field"> {/*// не влияет на расчеты*/}
+					<label>Количество систем (СКУД, СОТ, ОПС, Периметр)</label>
+					<input type="number" min="0" value={systems} onChange={handleInputChange(setSystems)} />
+				</div>
+                <div className="calc-field">
+                    <label>Количество элементов ТСО (видеокамеры, датчики, считыватели СКУД) и т.д.</label>
+                    <input type="number" min="0" value={elems} onChange={handleInputChange(setElems)} />
                 </div>
 
                 <div className="calc-field">
-                    <label>Количество систем (СКУД, ВН, ОПС, Периметр)</label>
-                    <input type="number" min="0" value={systems} onChange={(e) => setSystems(e.target.value || 0)} />
-                </div>
-
-                <div className="calc-field">
-                    <label>Количество подрядчиков на ТО (добавляется к пользователям)</label>
-                    <input type="number" min="0" value={contractors} onChange={(e) => setContractors(e.target.value || 0)} />
+                    <label>Количество пользователей в компании-подрядчике ТО</label>
+                    <input type="number" min="0" value={contractors} onChange={handleInputChange(setContractors)} />
                 </div>
 
                 <div className="calc-field checkbox">
+					<input type="checkbox" checked={integrationMonitoring} onChange={(e) => setIntegrationMonitoring(e.target.checked)} />
                     <label>
-                        <input type="checkbox" checked={integrationMonitoring} onChange={(e) => setIntegrationMonitoring(e.target.checked)} />
-                        Потребность в интеграции с системами мониторинга и управления ТСО
-                    </label>
+						Интеграция - требуется объединить мониторинг охранных систем
+					</label>
                 </div>
 
                 <div className="calc-field checkbox">
-                    <label>
-                        <input type="checkbox" checked={kpiControl} onChange={(e) => setKpiControl(e.target.checked)} />
-                        Контроль выполнения базовых показателей сервисного контракта (KPI)
-                    </label>
+					<input type="checkbox" checked={kpiControl} onChange={(e) => setKpiControl(e.target.checked)} />
+                    <label>Контроль выполнения показателей контракта на ТО и ППР</label>
                 </div>
 
                 <div className="calc-field">
                     <label>Количество обособленных предприятий</label>
-                    <input type="number" min="1" value={enterprises} onChange={(e) => setEnterprises(e.target.value || 1)} />
+                    <input type="number" min="0" value={enterprises} onChange={handleInputChange(setEnterprises)} />
                 </div>
 
                 <button className="calc-button" onClick={calculate}>
@@ -131,7 +144,7 @@ const Calculator = () => {
                         <li><strong>Стоимость лицензии при предоплате за 12 месяцев (-10%):</strong> {result.annual} руб. (НДС не облагается)</li>
                         <li><strong>Стоимость интеграционных работ:</strong> {result.integrationCost} руб. (в т.ч. НДС)</li>
                         <li><strong>Срок развертывания и интеграции:</strong> {result.deploymentDays} рабочих дней</li>
-                        <li className="total"><strong>Итого по проекту:</strong> {result.totalProject} руб.</li>
+                        <li className="total"><strong>Итого по проекту при оплате за 12 месяцев:</strong> {result.totalProject} руб.</li>
                     </ul>
                 </div>
             )}
