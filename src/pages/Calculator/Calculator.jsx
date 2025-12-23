@@ -1,24 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.scss';
 
+
 const Calculator = () => {
-    const [users, setUsers] = useState(10);
-    const [systems, setSystems] = useState(0);
-    const [elems, setElems] = useState(0);
-    const [contractors, setContractors] = useState(0);
+    // Используем строки для хранения значений полей ввода, чтобы контролировать ведущие нули
+    const [users, setUsers] = useState('10');
+    const [systems, setSystems] = useState('0');
+    const [elems, setElems] = useState('0');
+    const [contractors, setContractors] = useState('0');
     const [integrationMonitoring, setIntegrationMonitoring] = useState(false);
     const [kpiControl, setKpiControl] = useState(false);
-    const [enterprises, setEnterprises] = useState(0);
+    const [enterprises, setEnterprises] = useState('0');
 
     const [result, setResult] = useState(null);
 
+	useEffect(() => {
+		window.scrollTo(0, 250);
+	}, []);
+
     const calculate = () => {
-        const totalUsers = Number(users) + Number(contractors);
+        // Преобразуем строки в числа для расчетов
+        const numUsers = Number(users);
+        const numContractors = Number(contractors);
+        const numEnterprises = Number(enterprises);
+        const numElems = Number(elems);
+
+        const totalUsers = numUsers + numContractors;
 
         let license = 'Standard';
-		if (totalUsers <= 50 && enterprises === 0) {license = 'Standard'}
-		else if (totalUsers <= 100 && enterprises === 0 || kpiControl) {license = 'Corp'}
-		else if (totalUsers > 100 || enterprises >= 1) {license = 'Enterprise'}
+		if (totalUsers <= 50 && numEnterprises === 0) {license = 'Standard'}
+		else if (totalUsers <= 100 && numEnterprises === 0 || kpiControl) {license = 'Corp'}
+		else if (totalUsers > 100 || numEnterprises >= 1) {license = 'Enterprise'}
 
 
         let monthly = 0;
@@ -54,11 +66,11 @@ const Calculator = () => {
             annual = 8676720;
         }
 
-        const integrationCost = Math.round(1590 * Number(elems));
+        const integrationCost = Math.round(1590 * numElems);
 
         let deploymentDays = 5;
         if (license === 'Corp') deploymentDays = 20;
-        if (license === 'Enterprise') deploymentDays =20 + ( 2 * Number(enterprises));
+        if (license === 'Enterprise') deploymentDays = 20 + ( 2 * numEnterprises);
 
         const totalProject = annual + integrationCost;
 
@@ -70,21 +82,27 @@ const Calculator = () => {
             deploymentDays,
             totalProject: totalProject.toLocaleString('ru-RU'),
         });
-		console.log(result)
     };
 
-	const handleInputChange = (setter) => (e) => {
-		let val = e.target.value;
-		if (val.length > 1 && val.startsWith('0')) {
-			val = val.substring(1);
-		}
-		if (val === '') val = '0';
-		setter(val);
-	};
+    const handleInputChange = (setter) => (e) => {
+        let val = e.target.value;
+        
+        // Если значение начинается с 0 и имеет длину > 1, убираем ведущий ноль
+        if (val.length > 1 && val.startsWith('0')) {
+            val = val.replace(/^0+/, '');
+        }
+        
+        // Если поле пустое, ставим '0' (или можно оставить '', если нужно)
+        if (val === '') {
+            val = '0';
+        }
 
+        setter(val);
+    };
 
     return (
         <div className="calculator-container">
+
             <h1 className="calculator-title">Калькулятор стоимости GuarDiGiDesk®</h1>
             <p className="calculator-desc">
                 Заполните параметры, чтобы получить предварительный расчёт лицензии и внедрения.

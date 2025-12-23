@@ -11,7 +11,7 @@ import {Route, Routes} from "react-router";
 import RootLayout from "./RootLayout.jsx";
 import GuarDigiDesk from "./pages/GuarDigiDesk/GuarDigiDesk.jsx";
 import Calculator from './pages/Calculator/Calculator.jsx';
-
+import { CustomProvider } from 'rsuite';
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-    <>
+    <CustomProvider>
         <Header/>
         <Routes>
             <Route path="/" element={<RootLayout />}>
@@ -37,7 +37,7 @@ function App() {
         <Footer/>
         <Footer2/>
         <Cookie/>
-    </>
+    </CustomProvider>
   )
 }
 

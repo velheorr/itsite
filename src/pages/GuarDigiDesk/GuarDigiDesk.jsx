@@ -1,15 +1,21 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, } from 'react';
 import '../../css.scss'
 import gdlqr1 from "../../../public/gdlqr1.png";
-import {useLocation} from "react-router";
-import {Link} from "react-router";
+import {useLocation, useNavigate} from "react-router";
+import {Button} from "rsuite";
+
 
 const GuarDigiDesk = () => {
     const { pathname } = useLocation();
+	const nav = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
+
+	const openCalc = () => {
+		nav('/calculator');
+	}
 
     return (
         <div className={'digiDesk'}>
@@ -51,11 +57,11 @@ const GuarDigiDesk = () => {
                 </p>
                 <div className="calculator-cta mt50">
                     <p className="titleData tal mb20">
-                        Для получения точного расчета с учетом всех параметров воспользуйтесь нашим онлайн-калькулятором
+                        Для получения расчета с учетом всех параметров воспользуйтесь нашим онлайн-калькулятором
                     </p>
-                    <Link to="/calculator" className="calculator-btn">
-                        Перейти к калькулятору
-                    </Link>
+					<div style={{textAlign: 'right'}}>
+						<Button onClick={openCalc} appearance="primary" size='lg' >Калькулятор</Button>
+					</div>
                 </div>
             </section>
             <section className={'mt70 mb70'} data-aos="fade-down" style={{textAlign: 'right'}}>

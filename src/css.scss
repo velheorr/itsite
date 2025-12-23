@@ -71,6 +71,7 @@ $gradienTXTmini: linear-gradient(90deg, #615fff, #c6d2ff);
 .ml15 {margin-left: 15%}
 .mb15 {margin-bottom: 15px}
 .mb25 {margin-bottom: 25px}
+.mb30 {margin-bottom: 30px}
 .mb50 {margin-bottom: 50px}
 .mb70 {margin-bottom: 70px}
 .mb100 {margin-bottom: 100px}
@@ -183,6 +184,7 @@ footer {
   justify-content: center;
   gap: 15px;
   margin-top: 25px;
+    padding: 15px;
 }
 
 .cookie {
@@ -250,11 +252,11 @@ footer {
   }
 
   .tech-icon {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin: 0 auto 25px auto;
-    display: block;
+    /*margin: 0 auto 25px auto;*/
+    /*display: block;*/
   }
 
   h3 {
