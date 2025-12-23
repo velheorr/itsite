@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Text} from 'rsuite'
 import './Calculator.scss';
 
 
@@ -166,6 +167,10 @@ const Calculator = () => {
                     </ul>
                 </div>
             )}
+			<Text size='xs' muted style={{marginTop: '15px', maxWidth: '600px'}}>
+				РАСЧЕТЫ В ОНЛАЙН-КАЛЬКУЛЯТОРЕ ЯВЛЯЮТСЯ ПРЕДВАРИТЕЛЬНЫМИ И ПРЕДНАЗНАЧЕНЫ ДЛЯ ОЗНАКОМИТЕЛЬНЫХ ЦЕЛЕЙ. НЕ ЯВЛЯЕТСЯ ОФФЕРТОЙ. ДЛЯ УТОЧНЕНИЯ РАСЧЕТА
+				ОБРАТИТЕСЬ К МЕНЕДЖЕРУ ПО ТЕЛЕФОНУ <a href="tel:+79082661756">+7 (908) 266 17 56</a> ИЛИ <a href="mailto:sales@guardigilab.ru">SALES@GUARDIGILAB.RU</a>
+			</Text>
         </div>
     );
 };
