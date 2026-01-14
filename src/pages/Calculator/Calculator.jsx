@@ -30,9 +30,10 @@ const Calculator = () => {
 
         let license = 'Standard';
 		if (totalUsers <= 50 && numEnterprises === 0) {license = 'Standard'}
-		else if (totalUsers <= 100 && numEnterprises === 0 || kpiControl) {license = 'Corp'}
+		else if (totalUsers <= 100 && numEnterprises === 0 ) {license = 'Corp'}
 		else if (totalUsers > 100 || numEnterprises >= 1) {license = 'Enterprise'}
 
+		if (numElems >=100 || kpiControl) {license = 'Corp'}
 
         let monthly = 0;
         let annual = 0;
